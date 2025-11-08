@@ -1,369 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fresh Recovery Recipes (Parsley & Basil Edition)</title>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Recovery Recipes (Parsley &amp; Basil Edition)</title>
 <style>
-  :root{
-    --bg:#f8fafc;--card:#ffffff;--ink:#0f172a;--sub:#334155;--accent:#0ea5e9;--muted:#e2e8f0;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-  header{position:sticky;top:0;background:rgba(248,250,252,.95);backdrop-filter:saturate(180%) blur(8px);z-index:10;border-bottom:1px solid var(--muted)}
-  .wrap{max-width:920px;margin:0 auto;padding:18px 20px}
-  h1{margin:0;font-size:28px;letter-spacing:.2px}
-  .sub{color:var(--sub)}
-  .grid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media (min-width:900px){.grid{grid-template-columns:260px 1fr}}
-  .panel{background:var(--card);border:1px solid var(--muted);border-radius:14px;padding:14px}
-  input,select{width:100%;padding:10px 12px;border:1px solid var(--muted);border-radius:10px;background:#fff}
-  .toc a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none}
-  .toc a:hover{background:#eef6ff}
-  .recipe{scroll-margin-top:80px}
-  .recipe h2{margin:.2rem 0 0.3rem;font-size:22px}
-  .meta{color:var(--sub);font-size:14px;margin-bottom:8px}
-  .badge{display:inline-block;border:1px solid var(--muted);padding:2px 8px;border-radius:999px;font-size:12px;margin-right:6px}
-  ul{margin:.4rem 0 .9rem;padding-left:1.25rem}
-  li{margin:.2rem 0}
-  .cards{display:grid;grid-template-columns:1fr;gap:14px}
-  @media (min-width:700px){.cards{grid-template-columns:1fr 1fr}}
-  .card{background:var(--card);border:1px solid var(--muted);border-radius:14px;padding:16px}
-  footer{color:var(--sub);text-align:center;padding:28px}
-  .hide{display:none}
-  /* Print */
-  @media print{
-    header, .filters, .toc{display:none}
-    .wrap{max-width:100%;padding:0 12px}
-    .card{page-break-inside:avoid}
-  }
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#e2e8f0;--sub:#475569;--link:#0ea5e9}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header,footer{background:#fff;border-bottom:1px solid var(--muted)}
+header .wrap, footer .wrap, main .wrap{max-width:900px;margin:0 auto;padding:16px 20px}
+h1{font-size:26px;margin:0}
+h2{font-size:22px;margin:.2rem 0 .6rem}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.card{background:var(--card);border:1px solid var(--muted);border-radius:14px;padding:16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+ul{margin:.4rem 0 .9rem;padding-left:1.2rem}
+.meta{color:var(--sub);font-size:14px;margin-bottom:6px}
+.back{display:inline-block;margin:10px 0}
+hr{border:none;border-top:1px solid var(--muted);margin:16px 0}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>Fresh Recovery Recipes <span class="sub">(Parsley & Basil Edition)</span></h1>
-  </div>
-</header>
-
+<header><div class="wrap"><h1>Fresh Recovery Recipes (Parsley &amp; Basil Edition)</h1></div></header>
 <main class="wrap">
   <div class="grid">
-    <aside>
-      <div class="panel filters">
-        <label for="q" class="sub" style="display:block;margin-bottom:6px">Search recipes</label>
-        <input id="q" type="search" placeholder="e.g. lemon, chicken, basil, rice" />
-      </div>
-      <div class="panel toc">
-        <strong class="sub" style="display:block;margin-bottom:8px">Recipes</strong>
-        <nav id="toc"></nav>
-      </div>
-      <div class="panel">
-        <strong class="sub">Notes</strong>
-        <p style="margin:.5rem 0 0">Designed for post-viral taste/smell recovery. Emphasis on fresh, bright, mild flavours. No garlic, onions, mushrooms, or smoked/roasted flavours.</p>
-      </div>
-    </aside>
-
-    <section>
-      <div id="recipes" class="cards"></div>
-    </section>
+    
+    <div class="card">
+      <h2><a href="gentle-lemon-rice.html">Gentle Lemon Rice</a></h2>
+      <div class="meta">Time: 20 min • Serves: 2</div>
+      <p><a href="gentle-lemon-rice.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="sweet-potato-mash-basil.html">Sweet Potato Mash with Basil</a></h2>
+      <div class="meta">Time: 25 min • Serves: 2</div>
+      <p><a href="sweet-potato-mash-basil.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="steamed-chicken-lemon-rice.html">Steamed Chicken with Lemon Rice</a></h2>
+      <div class="meta">Time: 30 min • Serves: 2</div>
+      <p><a href="steamed-chicken-lemon-rice.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="steamed-white-fish-basil-greens.html">Steamed White Fish with Basil &amp; Greens</a></h2>
+      <div class="meta">Time: 20–25 min • Serves: 2</div>
+      <p><a href="steamed-white-fish-basil-greens.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="couscous-basil-chicken.html">Couscous with Basil &amp; Chicken</a></h2>
+      <div class="meta">Time: 15–20 min • Serves: 2</div>
+      <p><a href="couscous-basil-chicken.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="quinoa-salad-pineapple-parsley.html">Quinoa Salad with Pineapple &amp; Parsley</a></h2>
+      <div class="meta">Time: 25 min • Serves: 2</div>
+      <p><a href="quinoa-salad-pineapple-parsley.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="carrot-apple-slaw-yoghurt.html">Carrot–Apple Slaw with Yoghurt</a></h2>
+      <div class="meta">Time: 10 min • Serves: 2</div>
+      <p><a href="carrot-apple-slaw-yoghurt.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="yoghurt-melon-honey-bowl.html">Greek Yoghurt &amp; Melon Bowl with Honey</a></h2>
+      <div class="meta">Time: 5 min • Serves: 1–2</div>
+      <p><a href="yoghurt-melon-honey-bowl.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="overnight-oats-pear-lime.html">Overnight Oats with Pear &amp; Lime</a></h2>
+      <div class="meta">Time: 5 min (+overnight) • Serves: 1–2</div>
+      <p><a href="overnight-oats-pear-lime.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="rice-paper-rolls-chicken-cucumber.html">Rice Paper Rolls with Chicken &amp; Cucumber</a></h2>
+      <div class="meta">Time: 25 min • Serves: 2</div>
+      <p><a href="rice-paper-rolls-chicken-cucumber.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="sweetcorn-rice-salad.html">Sweetcorn &amp; Rice Salad</a></h2>
+      <div class="meta">Time: 15–20 min • Serves: 2</div>
+      <p><a href="sweetcorn-rice-salad.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="baked-sweet-potato-yoghurt-lime.html">Baked Sweet Potato with Yoghurt &amp; Lime</a></h2>
+      <div class="meta">Time: 45–60 min • Serves: 2</div>
+      <p><a href="baked-sweet-potato-yoghurt-lime.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="cucumber-tomato-salad-lemon-quinoa.html">Cucumber–Tomato Salad with Lemon Quinoa</a></h2>
+      <div class="meta">Time: 25 min • Serves: 2</div>
+      <p><a href="cucumber-tomato-salad-lemon-quinoa.html">Open recipe →</a></p>
+    </div>
+    
+    <div class="card">
+      <h2><a href="fresh-fruit-snack-plate.html">Fresh Fruit Snack Plate (Apple, Melon, Pineapple)</a></h2>
+      <div class="meta">Time: 5 min • Serves: 1</div>
+      <p><a href="fresh-fruit-snack-plate.html">Open recipe →</a></p>
+    </div>
+    
   </div>
 </main>
-
-<footer class="wrap">&copy; 2025 • Fresh Recovery Collection</footer>
-
-<script>
-// --- Recipe data (concise, recovery-friendly) ---
-const RECIPES = [
-  {
-    title: "Gentle Lemon Rice",
-    time: "20 min", serves: 2,
-    tags: ["rice","lemon","vegetarian","bright"],
-    ingredients: [
-      "3/4 cup jasmine/basmati rice",
-      "1 1/2 cups water",
-      "1 tbsp olive oil or small knob unsalted butter",
-      "Zest of 1 lemon",
-      "Juice of 1/2 lemon (to taste)",
-      "Small handful parsley or basil, finely chopped",
-      "Pinch of iodised salt",
-      "Optional: carrot matchsticks or sweetcorn"
-    ],
-    steps: [
-      "Rinse rice until water runs clear.",
-      "Cook rice with water: simmer covered 10–12 min until tender.",
-      "Warm oil/butter gently; stir in lemon zest 10–15 sec.",
-      "Fluff rice; fold in zest oil, lemon juice, herbs, and salt. Serve warm or room temp."
-    ]
-  },
-  {
-    title: "Sweet Potato Mash with Basil",
-    time: "25 min", serves: 2,
-    tags: ["sweet potato","vegetarian","comfort"],
-    ingredients: [
-      "2 medium sweet potatoes, peeled and cubed",
-      "1–2 tbsp Greek yoghurt",
-      "1 tsp olive oil",
-      "Few basil leaves, finely chopped",
-      "Pinch of salt",
-      "Optional: drizzle honey if extra gentle sweetness desired"
-    ],
-    steps: [
-      "Boil sweet potato in lightly salted water until very tender (12–15 min).",
-      "Drain well; mash with yoghurt and olive oil.",
-      "Fold in basil and adjust salt."
-    ]
-  },
-  {
-    title: "Steamed Chicken with Lemon Rice",
-    time: "30 min", serves: 2,
-    tags: ["chicken","lemon","mild"],
-    ingredients: [
-      "2 small chicken breasts",
-      "1 batch Gentle Lemon Rice (see recipe)",
-      "Lemon wedges",
-      "Parsley, chopped",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Season chicken lightly with salt; steam over gently simmering water 12–15 min until cooked through (juices clear).",
-      "Rest 3 min, then slice or shred.",
-      "Serve over Gentle Lemon Rice with a squeeze of lemon and parsley."
-    ]
-  },
-  {
-    title: "Steamed White Fish with Basil & Greens",
-    time: "20–25 min", serves: 2,
-    tags: ["fish","basil","light"],
-    ingredients: [
-      "2 white fish fillets (cod, haddock, pollock)",
-      "1 medium sweet potato, for mash",
-      "Handful green beans, trimmed",
-      "1 tbsp olive oil",
-      "Basil leaves, finely sliced",
-      "Lemon or lime wedges",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Steam fish 8–10 min until opaque and flakes easily.",
-      "Boil green beans 3–4 min until crisp‑tender; drain.",
-      "Serve fish with sweet potato mash, drizzle olive oil, sprinkle basil, and add citrus."
-    ]
-  },
-  {
-    title: "Couscous with Basil & Chicken",
-    time: "15–20 min", serves: 2,
-    tags: ["couscous","chicken","basil"],
-    ingredients: [
-      "1 cup couscous",
-      "1 cup hot water",
-      "1 small chicken breast, cooked and shredded",
-      "1/2 cucumber, diced",
-      "Handful basil leaves, torn",
-      "1 tbsp olive oil",
-      "Juice of 1/2 lemon",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Cover couscous with hot water; stand 5 min then fluff.",
-      "Fold in chicken, cucumber, basil, olive oil, lemon juice, and salt.",
-      "Serve warm or room temperature."
-    ]
-  },
-  {
-    title: "Quinoa Salad with Pineapple & Parsley",
-    time: "25 min", serves: 2,
-    tags: ["quinoa","pineapple","parsley"],
-    ingredients: [
-      "3/4 cup quinoa, rinsed",
-      "1 1/2 cups water",
-      "1 cup pineapple chunks (fresh or thawed)",
-      "Small bunch parsley, chopped",
-      "1 tbsp olive oil",
-      "Juice of 1/2 lime",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Simmer quinoa in water 15 min; stand 5 min and fluff.",
-      "Toss with pineapple, parsley, olive oil, lime, and salt; chill or serve cool."
-    ]
-  },
-  {
-    title: "Carrot–Apple Slaw with Yoghurt",
-    time: "10 min", serves: 2,
-    tags: ["carrot","apple","yoghurt"],
-    ingredients: [
-      "2 carrots, grated",
-      "1 crisp apple, grated or julienned",
-      "3 tbsp Greek yoghurt",
-      "Squeeze of lime",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Combine carrot and apple; stir in yoghurt, lime, and salt.",
-      "Serve chilled for a fresh, gentle crunch."
-    ]
-  },
-  {
-    title: "Greek Yoghurt & Melon Bowl with Honey",
-    time: "5 min", serves: 1–2,
-    tags: ["breakfast","melon","yoghurt"],
-    ingredients: [
-      "1 cup Greek yoghurt",
-      "1–2 cups melon cubes",
-      "1–2 tsp honey"
-    ],
-    steps: [
-      "Spoon yoghurt into a bowl, top with melon and drizzle with honey."
-    ]
-  },
-  {
-    title: "Overnight Oats with Pear & Lime",
-    time: "5 min (+overnight)", serves: 1–2,
-    tags: ["oats","pear","lime"],
-    ingredients: [
-      "1/2 cup oats",
-      "1/2 cup milk or oat milk",
-      "1/2 pear, grated",
-      "Lime zest (a little)",
-      "1 tsp honey (optional)"
-    ],
-    steps: [
-      "Mix all ingredients in a jar; refrigerate overnight.",
-      "Stir and serve cold."
-    ]
-  },
-  {
-    title: "Rice Paper Rolls with Chicken & Cucumber",
-    time: "25 min", serves: 2,
-    tags: ["chicken","cucumber","light"],
-    ingredients: [
-      "8 rice paper wrappers",
-      "1 small chicken breast, cooked and sliced",
-      "Lettuce leaves",
-      "Cucumber sticks",
-      "Basil or parsley leaves",
-      "Lime wedges"
-    ],
-    steps: [
-      "Soak wrappers briefly in warm water until pliable.",
-      "Fill with lettuce, chicken, cucumber, and herbs; roll tightly.",
-      "Serve with lime to squeeze over."
-    ]
-  },
-  {
-    title: "Sweetcorn & Rice Salad",
-    time: "15–20 min", serves: 2,
-    tags: ["rice","sweetcorn","simple"],
-    ingredients: [
-      "2 cups cooked rice (cooled)",
-      "1 cup sweetcorn",
-      "Spring onion greens, thinly sliced (tops only)",
-      "Parsley, chopped",
-      "1 tbsp olive oil",
-      "Juice of 1/2 lemon",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Toss rice with sweetcorn, spring onion greens, parsley, oil, lemon, and salt.",
-      "Chill or serve room temperature."
-    ]
-  },
-  {
-    title: "Baked Sweet Potato with Yoghurt & Lime",
-    time: "45–60 min", serves: 2,
-    tags: ["sweet potato","comfort"],
-    ingredients: [
-      "2 medium sweet potatoes",
-      "1/2 cup Greek yoghurt",
-      "Lime zest + juice (to taste)",
-      "Pinch of salt",
-      "Optional: drizzle honey"
-    ],
-    steps: [
-      "Bake whole sweet potatoes at 200°C for 40–55 min until very soft.",
-      "Split, fluff with fork; top with yoghurt, lime, and a little salt."
-    ]
-  },
-  {
-    title: "Cucumber–Tomato Salad with Lemon Quinoa",
-    time: "25 min", serves: 2,
-    tags: ["quinoa","salad","lemon"],
-    ingredients: [
-      "3/4 cup quinoa, rinsed",
-      "1 1/2 cups water",
-      "1 cup diced cucumber",
-      "1 cup diced cherry tomatoes",
-      "Parsley or basil, chopped",
-      "1 tbsp olive oil",
-      "Juice of 1/2 lemon",
-      "Pinch of salt"
-    ],
-    steps: [
-      "Cook quinoa in water 15 min; fluff and cool slightly.",
-      "Fold in veg, herbs, oil, lemon, and salt."
-    ]
-  },
-  {
-    title: "Fresh Fruit Snack Plate (Apple, Melon, Pineapple)",
-    time: "5 min", serves: 1,
-    tags: ["snack","fruit","simple"],
-    ingredients: [
-      "Apple slices",
-      "Melon cubes",
-      "Pineapple chunks",
-      "Optional: mild cheese cubes (mozzarella or feta)"
-    ],
-    steps: [
-      "Arrange fruit and optional cheese; serve chilled."
-    ]
-  }
-];
-
-// --- Render functions ---
-const recipesEl = document.getElementById('recipes');
-const tocEl = document.getElementById('toc');
-
-function makeRecipeCard(r){
-  const card = document.createElement('article');
-  card.className = 'card recipe';
-  card.id = slug(r.title);
-  card.innerHTML = `
-    <h2>${r.title}</h2>
-    <div class="meta">Time: ${r.time} &nbsp;•&nbsp; Serves: ${r.serves}</div>
-    <div class="badge">${r.tags.join('</div><div class="badge">')}</div>
-    <h3>Ingredients</h3>
-    <ul>${r.ingredients.map(i=>`<li>${i}</li>`).join('')}</ul>
-    <h3>Instructions</h3>
-    <ul>${r.steps.map(s=>`<li>${s}</li>`).join('')}</ul>
-  `;
-  return card;
-}
-
-function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
-
-function render(recipes){
-  recipesEl.innerHTML = '';
-  tocEl.innerHTML = '';
-  recipes.forEach(r=>{
-    recipesEl.appendChild(makeRecipeCard(r));
-    const a = document.createElement('a');
-    a.href = `#${slug(r.title)}`;
-    a.textContent = r.title;
-    tocEl.appendChild(a);
-  });
-}
-
-function filterRecipes(q){
-  const term = q.trim().toLowerCase();
-  if(!term){render(RECIPES);return}
-  const filt = RECIPES.filter(r => r.title.toLowerCase().includes(term)
-    || r.tags.join(' ').toLowerCase().includes(term)
-    || r.ingredients.join(' ').toLowerCase().includes(term));
-  render(filt);
-}
-
-document.getElementById('q').addEventListener('input', e=> filterRecipes(e.target.value));
-render(RECIPES);
-</script>
-</body>
-</html>
+<footer><div class="wrap">&copy; 2025 • Fresh Recovery Recipes</div></footer>
+</body></html>
