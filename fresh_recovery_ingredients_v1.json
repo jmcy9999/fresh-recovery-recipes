@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "schema": "fresh-recovery-ingredients",
+    "version": 1
+  },
+  "categories": [
+    {
+      "id": "veg",
+      "name": "Vegetables & Roots",
+      "items": [
+        "sweet-potato",
+        "carrot"
+      ]
+    },
+    {
+      "id": "fruit",
+      "name": "Fruits",
+      "items": [
+        "lemon",
+        "lime"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "sweet-potato",
+      "label": "Sweet potato",
+      "categoryId": "veg"
+    },
+    {
+      "id": "carrot",
+      "label": "Carrot",
+      "categoryId": "veg"
+    },
+    {
+      "id": "lemon",
+      "label": "Lemon",
+      "categoryId": "fruit"
+    },
+    {
+      "id": "lime",
+      "label": "Lime",
+      "categoryId": "fruit"
+    }
+  ]
+}

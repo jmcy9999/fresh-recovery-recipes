@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Foods I Like — Fresh Recovery Recipes</title>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#e2e8f0;--sub:#475569;--link:#0ea5e9}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header,footer{background:#fff;border-bottom:1px solid var(--muted)}
+.wrap{max-width:980px;margin:0 auto;padding:16px 20px}
+h1{font-size:26px;margin:0}
+h2{font-size:20px;margin:1rem 0 .5rem}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.controls{display:grid;gap:10px;margin:12px 0}
+.controls input[type="search"], .controls select{
+  width:100%;padding:10px;border:1px solid var(--muted);border-radius:10px;background:#fff
+}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--muted);border-radius:14px;padding:16px}
+.meta{color:var(--sub);font-size:14px;margin-bottom:6px}
+ul{margin:.4rem 0 .9rem;padding-left:1.2rem}
+li{margin:.2rem 0;display:flex;align-items:center;gap:8px}
+.badge{display:inline-block;border:1px solid var(--muted);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px}
+.back{display:inline-block;margin:10px 0}
+hr{border:none;border-top:1px solid var(--muted);margin:16px 0}
+.empty{color:var(--sub);font-style:italic;margin:6px 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Foods I Like</h1>
+    <a class="back" href="index.html">← Back to recipes</a>
+  </div>
+</header>
+<main class="wrap">
+  <div class="controls">
+    <input id="q" type="search" placeholder="Filter foods (e.g. lemon, rice, basil)" />
+    <select id="view">
+      <option value="all">Show: All items</option>
+      <option value="liked">Show: Liked only</option>
+      <option value="unliked">Show: Not liked</option>
+    </select>
+  </div>
+  <div id="list" class="grid" aria-live="polite"></div>
+</main>
+<footer>
+  <div class="wrap">&copy; 2025 • Fresh Recovery Recipes</div>
+</footer>
+<script>
+const JSON_PATH = './fresh_recovery_ingredients_v1.json';
+const STORAGE_KEY = 'likedIngredientsV1';
+let categories = [];
+let ingredients = [];
+let liked = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+const listEl = document.getElementById('list');
+const qEl = document.getElementById('q');
+const viewEl = document.getElementById('view');
+
+fetch(JSON_PATH)
+  .then(r => r.json())
+  .then(data => { categories = data.categories; ingredients = data.ingredients; render(); })
+  .catch(err => {
+    console.error('Failed to load JSON:', err);
+    listEl.innerHTML = `<div class="card"><p class="empty">Could not load the foods list. Make sure ${JSON_PATH} is in the same folder as this page.</p></div>`;
+  });
+
+function render() {
+  const term = qEl.value.trim().toLowerCase();
+  const mode = viewEl.value;
+  const ingMap = new Map(ingredients.map(i => [i.id, i]));
+  listEl.innerHTML = '';
+  for (const cat of categories) {
+    const items = cat.items
+      .map(id => ingMap.get(id))
+      .filter(Boolean)
+      .filter(i => term ? i.label.toLowerCase().includes(term) : true)
+      .filter(i => {
+        if (mode === 'liked') return liked.has(i.id);
+        if (mode === 'unliked') return !liked.has(i.id);
+        return true;
+      });
+    const card = document.createElement('section');
+    card.className = 'card';
+    card.innerHTML = `<h2>${escapeHTML(cat.name)} <span class="badge">${items.length}</span></h2><ul></ul>`;
+    const ul = card.querySelector('ul');
+    if (!items.length) {
+      const p = document.createElement('p'); p.className = 'empty'; p.textContent = 'No items match the current filters.';
+      card.appendChild(p);
+    } else {
+      for (const i of items) {
+        const li = document.createElement('li');
+        const id = `chk-${i.id}`;
+        li.innerHTML = `<input type="checkbox" id="${id}" ${liked.has(i.id)?'checked':''}/><label for="${id}">${escapeHTML(i.label)}</label>`;
+        li.querySelector('input').addEventListener('change', (e)=>toggleLike(i.id,e.target.checked));
+        ul.appendChild(li);
+      }
+    }
+    listEl.appendChild(card);
+  }
+}
+function toggleLike(id, checked) {
+  if (checked) liked.add(id); else liked.delete(id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify([...liked]));
+}
+qEl.addEventListener('input', render);
+viewEl.addEventListener('change', render);
+function escapeHTML(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',''':'&#39;'}[m]));}
+</script>
+</body>
+</html>
