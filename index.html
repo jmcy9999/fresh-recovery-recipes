@@ -1,116 +1,215 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fresh Recovery Recipes (Parsley &amp; Basil Edition)</title>
+<title>Fresh Recovery Recipes – Full Collection (Parsley &amp; Basil Edition)</title>
 <style>
 :root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#e2e8f0;--sub:#475569;--link:#0ea5e9}
 *{box-sizing:border-box}
 body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
 header,footer{background:#fff;border-bottom:1px solid var(--muted)}
-header .wrap, footer .wrap, main .wrap{max-width:900px;margin:0 auto;padding:16px 20px}
+header .wrap, footer .wrap, main .wrap{max-width:980px;margin:0 auto;padding:16px 20px}
 h1{font-size:26px;margin:0}
 h2{font-size:22px;margin:.2rem 0 .6rem}
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
 .card{background:var(--card);border:1px solid var(--muted);border-radius:14px;padding:16px;margin:12px 0}
 .grid{display:grid;grid-template-columns:1fr;gap:12px}
-@media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
 ul{margin:.4rem 0 .9rem;padding-left:1.2rem}
 .meta{color:var(--sub);font-size:14px;margin-bottom:6px}
 .back{display:inline-block;margin:10px 0}
+.search{position:sticky;top:0;background:#fff;border:1px solid var(--muted);border-radius:12px;padding:10px;margin:10px 0}
+input[type=search]{width:100%;padding:10px;border:1px solid var(--muted);border-radius:10px}
 hr{border:none;border-top:1px solid var(--muted);margin:16px 0}
 </style>
 </head>
 <body>
-<header><div class="wrap"><h1>Fresh Recovery Recipes (Parsley &amp; Basil Edition)</h1></div></header>
+<header><div class="wrap"><h1>Fresh Recovery Recipes – Full Collection (Parsley &amp; Basil Edition)</h1></div></header>
 <main class="wrap">
-  <div class="grid">
+  <div class="search"><input type="search" id="q" placeholder="Search recipes (ingredient or title)…"></div>
+  <div id="list" class="grid">
     
     <div class="card">
       <h2><a href="gentle-lemon-rice.html">Gentle Lemon Rice</a></h2>
       <div class="meta">Time: 20 min • Serves: 2</div>
       <p><a href="gentle-lemon-rice.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="sweet-potato-mash-basil.html">Sweet Potato Mash with Basil</a></h2>
       <div class="meta">Time: 25 min • Serves: 2</div>
       <p><a href="sweet-potato-mash-basil.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="steamed-chicken-lemon-rice.html">Steamed Chicken with Lemon Rice</a></h2>
       <div class="meta">Time: 30 min • Serves: 2</div>
       <p><a href="steamed-chicken-lemon-rice.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="steamed-white-fish-basil-greens.html">Steamed White Fish with Basil &amp; Greens</a></h2>
       <div class="meta">Time: 20–25 min • Serves: 2</div>
       <p><a href="steamed-white-fish-basil-greens.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="couscous-basil-chicken.html">Couscous with Basil &amp; Chicken</a></h2>
       <div class="meta">Time: 15–20 min • Serves: 2</div>
       <p><a href="couscous-basil-chicken.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="quinoa-salad-pineapple-parsley.html">Quinoa Salad with Pineapple &amp; Parsley</a></h2>
       <div class="meta">Time: 25 min • Serves: 2</div>
       <p><a href="quinoa-salad-pineapple-parsley.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="carrot-apple-slaw-yoghurt.html">Carrot–Apple Slaw with Yoghurt</a></h2>
       <div class="meta">Time: 10 min • Serves: 2</div>
       <p><a href="carrot-apple-slaw-yoghurt.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="yoghurt-melon-honey-bowl.html">Greek Yoghurt &amp; Melon Bowl with Honey</a></h2>
       <div class="meta">Time: 5 min • Serves: 1–2</div>
       <p><a href="yoghurt-melon-honey-bowl.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="overnight-oats-pear-lime.html">Overnight Oats with Pear &amp; Lime</a></h2>
       <div class="meta">Time: 5 min (+overnight) • Serves: 1–2</div>
       <p><a href="overnight-oats-pear-lime.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="rice-paper-rolls-chicken-cucumber.html">Rice Paper Rolls with Chicken &amp; Cucumber</a></h2>
       <div class="meta">Time: 25 min • Serves: 2</div>
       <p><a href="rice-paper-rolls-chicken-cucumber.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="sweetcorn-rice-salad.html">Sweetcorn &amp; Rice Salad</a></h2>
       <div class="meta">Time: 15–20 min • Serves: 2</div>
       <p><a href="sweetcorn-rice-salad.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="baked-sweet-potato-yoghurt-lime.html">Baked Sweet Potato with Yoghurt &amp; Lime</a></h2>
       <div class="meta">Time: 45–60 min • Serves: 2</div>
       <p><a href="baked-sweet-potato-yoghurt-lime.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="cucumber-tomato-salad-lemon-quinoa.html">Cucumber–Tomato Salad with Lemon Quinoa</a></h2>
       <div class="meta">Time: 25 min • Serves: 2</div>
       <p><a href="cucumber-tomato-salad-lemon-quinoa.html">Open recipe →</a></p>
     </div>
-    
     <div class="card">
       <h2><a href="fresh-fruit-snack-plate.html">Fresh Fruit Snack Plate (Apple, Melon, Pineapple)</a></h2>
       <div class="meta">Time: 5 min • Serves: 1</div>
       <p><a href="fresh-fruit-snack-plate.html">Open recipe →</a></p>
     </div>
-    
+    <div class="card">
+      <h2><a href="lemon-herb-couscous.html">Lemon–Herb Couscous Salad</a></h2>
+      <div class="meta">Time: 10–15 min • Serves: 2</div>
+      <p><a href="lemon-herb-couscous.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="apple-celery-crunch.html">Apple–Celery Crunch Salad</a></h2>
+      <div class="meta">Time: 10 min • Serves: 2</div>
+      <p><a href="apple-celery-crunch.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="zesty-courgette-ribbons.html">Zesty Courgette Ribbons</a></h2>
+      <div class="meta">Time: 5–10 min • Serves: 2</div>
+      <p><a href="zesty-courgette-ribbons.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="chilled-cucumber-avocado-soup.html">Chilled Cucumber–Avocado Soup</a></h2>
+      <div class="meta">Time: 10 min • Serves: 2</div>
+      <p><a href="chilled-cucumber-avocado-soup.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="carrot-apple-ginger-soup.html">Carrot–Apple–Ginger Soup</a></h2>
+      <div class="meta">Time: 30 min • Serves: 2</div>
+      <p><a href="carrot-apple-ginger-soup.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="green-smoothie-simple.html">Green Smoothie (gentle)</a></h2>
+      <div class="meta">Time: 5 min • Serves: 1–2</div>
+      <p><a href="green-smoothie-simple.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="fresh-herb-rice-bowl.html">Fresh Herb Rice Bowl</a></h2>
+      <div class="meta">Time: 15–20 min • Serves: 2</div>
+      <p><a href="fresh-herb-rice-bowl.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="lime-coconut-veg-stirfry.html">Lime–Coconut Veg Stir‑Fry (gentle)</a></h2>
+      <div class="meta">Time: 10–12 min • Serves: 2</div>
+      <p><a href="lime-coconut-veg-stirfry.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="lemon-herb-polenta-asparagus.html">Lemon–Herb Polenta with Asparagus</a></h2>
+      <div class="meta">Time: 20 min • Serves: 2</div>
+      <p><a href="lemon-herb-polenta-asparagus.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="citrus-lentil-salad.html">Citrus Lentil Salad</a></h2>
+      <div class="meta">Time: 20–25 min • Serves: 2</div>
+      <p><a href="citrus-lentil-salad.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="pineapple-cucumber-herb-salad.html">Pineapple–Cucumber–Herb Salad</a></h2>
+      <div class="meta">Time: 10 min • Serves: 2</div>
+      <p><a href="pineapple-cucumber-herb-salad.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="sweetcorn-rice-carrot-bowl.html">Sweetcorn, Rice &amp; Carrot Bowl</a></h2>
+      <div class="meta">Time: 15–20 min • Serves: 2</div>
+      <p><a href="sweetcorn-rice-carrot-bowl.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="sweet-potato-corn-rice-bowl.html">Sweet Potato, Corn &amp; Rice Bowl</a></h2>
+      <div class="meta">Time: 25–30 min • Serves: 2</div>
+      <p><a href="sweet-potato-corn-rice-bowl.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="tomato-carrot-pasta.html">Tomato &amp; Carrot Pasta</a></h2>
+      <div class="meta">Time: 20–25 min • Serves: 2</div>
+      <p><a href="tomato-carrot-pasta.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="honey-sweet-potato-mash.html">Honey–Glazed Sweet Potato Mash</a></h2>
+      <div class="meta">Time: 20–25 min • Serves: 2</div>
+      <p><a href="honey-sweet-potato-mash.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="warm-rice-salad-pineapple.html">Warm Rice Salad with Pineapple</a></h2>
+      <div class="meta">Time: 15–20 min • Serves: 2</div>
+      <p><a href="warm-rice-salad-pineapple.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="cucumber-lettuce-apple-salad.html">Cucumber–Lettuce–Apple Salad</a></h2>
+      <div class="meta">Time: 10 min • Serves: 2</div>
+      <p><a href="cucumber-lettuce-apple-salad.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="corn-cheese-quesadilla.html">Corn &amp; Cheese Quesadilla (Simple)</a></h2>
+      <div class="meta">Time: 10 min • Serves: 1–2</div>
+      <p><a href="corn-cheese-quesadilla.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="chicken-carrot-rice-soup.html">Shredded Chicken &amp; Carrot Rice Soup</a></h2>
+      <div class="meta">Time: 25–30 min • Serves: 2</div>
+      <p><a href="chicken-carrot-rice-soup.html">Open recipe →</a></p>
+    </div>
+    <div class="card">
+      <h2><a href="pasta-salad-melon-cheese.html">Pasta Salad with Melon &amp; Cheese</a></h2>
+      <div class="meta">Time: 20–25 min • Serves: 2</div>
+      <p><a href="pasta-salad-melon-cheese.html">Open recipe →</a></p>
+    </div>
   </div>
 </main>
 <footer><div class="wrap">&copy; 2025 • Fresh Recovery Recipes</div></footer>
+<script>
+const cards=[...document.querySelectorAll('#list .card')];
+document.getElementById('q').addEventListener('input', e=>{{
+  const term=e.target.value.toLowerCase();
+  cards.forEach(c=>{{
+    const t=c.textContent.toLowerCase();
+    c.style.display = t.includes(term) ? '' : 'none';
+  }});
+}});
+</script>
 </body></html>
